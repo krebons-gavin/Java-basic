@@ -1,5 +1,6 @@
 /**
  * Created by Gavin on 2016/6/19
+ * Modified by Gavin on 2016/11/28
  * http://www.runoob.com/java/java-loop.html
  */
 
@@ -48,11 +49,33 @@ public class MyLoop {
         // break关键字
         // break主要用在循环语句或者switch语句中，用来跳出整个语句块。
         // break跳出最里层的循环，并且继续执行该循环下面的语句。
+        // 结果：10    20
+        int[] numbers2 = {10, 20, 30, 40, 50};
 
+        for (int x : numbers2) {
+            if (x == 30) {
+                break;
+            }
+
+            System.out.print(x);
+            System.out.print("\n");
+        }
 
         // continue关键字
         // continue适用于任何循环控制结构中。作用是让程序立刻跳转到下一次循环的迭代。
+        // 结果：10    20  40  50
+        System.out.println("loop-continue");
 
+        int [] numbers3={10,20,30,40,50};
+
+        for (int x: numbers3){
+            if(x==30){
+                continue;
+            }
+
+            System.out.print(x);
+            System.out.print("\n");
+        }
 
     }
 }
