@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         // 输入整数
         Scanner scan=new Scanner(System.in);
-        System.out.println("请输入一个大于5小于500的整数：");
+        System.out.println("质因数分解，请输入一个大于5小于500的整数：");
         int NUM=scan.nextInt();
 
         // 对整数进行因数分解
@@ -26,11 +26,12 @@ public class Main {
         int num = NUM;
         System.out.print(num + "=");
         while (num > k) {
+            // 判断num除以K的余数是否为0，能整除的话就进行分解
             if (num % k == 0) {
                 System.out.print(k + "*");
                 num = num / k;
             } else {
-                k++;
+                k++;  // 不能整除的话，k+1
             }
         }
         System.out.println(k);
