@@ -8,11 +8,12 @@ package com.gavin;
 //import java.util.Scanner;
 import java.util.Arrays;
 
-// 快速排序算法：递归方式
+// 快速排序算法：递归方式实现
+// 类定义
 public class Main {
     // 分区函数
     private static int partition(int[] arr, int low, int high) {
-        int counter=1;
+        
         //指定左指针i和右指针j
         int i = low;
         int j = high;
@@ -54,8 +55,6 @@ public class Main {
         System.out.println("基准位置i=："+i); // temp
         System.out.println("a[i]="+arr[i]); // temp
         System.out.println("当前数组为："+Arrays.toString(arr)); // temp
-        counter ++;
-        System.out.println("分区函数调用次数："+counter);
         return i;
     }
 
